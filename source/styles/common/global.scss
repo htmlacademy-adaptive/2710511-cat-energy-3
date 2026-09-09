@@ -1,1 +1,14 @@
 /* здесь используйте глобальные селекторы img, body, html и так далее */
+body {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+}
+
+.button {
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  background-color: #68b738;
+  color: #ffffff;
+  text-transform: uppercase;
+}

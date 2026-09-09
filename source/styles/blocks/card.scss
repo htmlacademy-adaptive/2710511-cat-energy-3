@@ -1,0 +1,25 @@
+.card__title {
+  font-size: 16px;
+  line-height: 20px;
+  color: $special_dark-grey-2;
+  text-transform: uppercase;
+}
+
+.card__info-title {
+  font-family: "Lato", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  color: $special_dark-grey;
+}
+
+.card__info-item {
+  font-family: "Lato", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  color: $special_dark-grey;
+}
+
+.button--grey {
+  background-color: #f2f2f2;
+  color: $special_dark-grey;
+}
