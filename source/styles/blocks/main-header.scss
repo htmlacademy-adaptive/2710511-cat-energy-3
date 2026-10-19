@@ -1,0 +1,87 @@
+.main-header {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  border-bottom: 1px solid #e6e6e6;
+
+  &--index {
+    border-bottom: none;
+  }
+}
+
+.main-header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+  padding: 10px 0;
+  flex-wrap: wrap;
+}
+
+@media (min-width: $tablet-width) {
+  .main-header {
+    background-color: #ffffff;
+    border-bottom: none;
+  }
+
+  .main-header__container {
+    max-width: 768px;
+    padding: 25px 30px;
+    flex-wrap: nowrap;
+  }
+
+  .main-header__logo {
+    gap: 13px;
+    padding: 0;
+  }
+
+  .main-header__nav {
+    margin-left: auto;
+    margin-right: 4px;
+    margin-top: 5px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-header {
+    position: relative;
+    background-color: transparent;
+    width: 100%;
+    z-index: auto;
+  }
+
+  .main-header--index {
+    position: relative;
+    background: linear-gradient(to right, #ffffff 50%, transparent 50%);
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50%;
+      height: 694px;
+      background-image:
+        linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+        url("../../images/intro-background-cat-desktop@1x.jpg");
+      background-repeat: no-repeat;
+      background-position: left top;
+      background-size: cover;
+      z-index: 0;
+    }
+  }
+
+  .main-header__container {
+    position: relative;
+    max-width: 1440px;
+    padding: 55px 110px 25px;
+    align-items: flex-start;
+    z-index: 2;
+  }
+
+  .main-header__logo {
+    gap: 14px;
+  }
+}

@@ -1,0 +1,26 @@
+.logo-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid #d9d9d9;
+  padding-bottom: 20px;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .logo-footer {
+    width: auto;
+    padding-bottom: 0;
+    border-bottom: none;
+    justify-self: start;
+  }
+}

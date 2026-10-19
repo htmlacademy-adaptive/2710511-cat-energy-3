@@ -1,0 +1,135 @@
+.contacts {
+  position: relative;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.contacts__container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+  padding: 26px 20px;
+  background-color: #ffffff;
+}
+
+.contacts__container--catalog {
+  background-color: $color-grey;
+}
+
+.contacts__title {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #111111;
+  text-transform: uppercase;
+  margin: 0;
+  max-width: 150px;
+}
+
+.contacts__address {
+  font-family: "Lato", "Arial", sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: $color-muted;
+  margin: 0;
+  max-width: 140px;
+}
+
+.contacts__address-text {
+  margin: 0;
+}
+
+.contacts__address-city {
+  margin: 0;
+}
+
+.contacts__map-iframe {
+  border: none;
+  width: 100%;
+  display: block;
+}
+
+.contacts__map-img {
+  display: none;
+}
+
+body:has(.nav--nojs) {
+  .contacts__map-iframe {
+    display: none;
+  }
+
+  .contacts__map-img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .contacts__container {
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 60px 70px;
+  }
+
+  .contacts__title {
+    font-size: 20px;
+    line-height: 26px;
+    max-width: 163px;
+  }
+
+  .contacts__address {
+    font-size: 16px;
+    text-align: right;
+    min-width: 157px;
+  }
+
+  .contacts__address-text {
+    margin: 0;
+  }
+
+  .contacts__address-city {
+    margin: 20px 0 0;
+  }
+
+  .contacts__map-iframe {
+    height: 400px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contacts__container {
+    grid-column: 2 / 3;
+    grid-row: 1;
+    z-index: 2;
+    place-self: start start;
+    margin: 95px 0;
+    width: 565px;
+    padding: 60px 78px 60px 80px;
+    background-color: #ffffff;
+  }
+
+  .contacts {
+    display: grid;
+    grid-template-columns: 1fr minmax(auto, 1220px) 1fr;
+    grid-template-rows: minmax(400px, auto);
+    background-color: transparent;
+  }
+
+  .contacts__map {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    z-index: 1;
+  }
+
+
+  .contacts__address {
+    text-align: left;
+  }
+}

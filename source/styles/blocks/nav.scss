@@ -1,0 +1,168 @@
+.nav {
+  width: auto;
+}
+
+.nav__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.nav__toggle {
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin-right: 20px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 2;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+
+.nav__item {
+  border-top: 1px solid #e6e6e6;
+}
+
+.nav__link {
+  display: block;
+  font-size: 20px;
+  line-height: 20px;
+  color: #000000;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  padding: 22px 20px;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
+}
+
+.nav--closed .nav__toggle {
+  background-image: url("../../icons/stack.svg#icon-burger");
+  background-size: 24px 24px;
+}
+
+.nav--closed .nav__list {
+  display: none;
+}
+
+.nav--opened .nav__toggle {
+  background-image: url("../../icons/stack.svg#icon-cross");
+  background-size: 18px 18px;
+}
+
+.nav--opened .nav__list {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e6e6e6;
+  z-index: 2;
+}
+
+.nav--nojs {
+  width: 100%;
+
+  .nav__toggle {
+    display: none;
+  }
+
+  .nav__list {
+    display: block;
+    position: static;
+    width: 100%;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .nav__toggle {
+    display: none;
+  }
+
+  .nav--closed .nav__list,
+  .nav--opened .nav__list {
+    display: flex;
+    position: static;
+  }
+
+  .nav__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 33px;
+    width: auto;
+    max-width: 500px;
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    justify-content: flex-end;
+  }
+
+  .nav__item {
+    border: none;
+  }
+
+  .nav__link {
+    font-size: 18px;
+    line-height: 24px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #000000;
+    padding: 0 0 5px;
+    border-bottom: 2px solid transparent;
+
+    &--current {
+      border-color: $color-green;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .nav__list {
+    gap: 33px;
+    max-width: 610px;
+    margin-top: 10px;
+  }
+
+  .nav__link {
+    font-size: 20px;
+    line-height: 30px;
+    color: #000000;
+
+    &--current {
+      border-color: $color-green;
+    }
+  }
+
+  .main-header--index .nav__link {
+    color: #ffffff;
+
+    &--current {
+      border-color: #ffffff;
+    }
+  }
+}

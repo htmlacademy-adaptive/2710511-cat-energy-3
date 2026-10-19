@@ -1,0 +1,54 @@
+.copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-top: 20px;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 27px;
+    height: 34px;
+    background-color: #666666;
+    mask-image: url("../../icons/stack.svg#html-logo");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+    flex-shrink: 0;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    background-color: $color-green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:active::after {
+    background-color: $color-green;
+  }
+}
+
+
+.copyright__text {
+  font-family: "Lato", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: $color-muted;
+  margin: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .copyright {
+    width: auto;
+    padding-top: 0;
+    gap: 22px;
+    justify-self: end;
+  }
+}

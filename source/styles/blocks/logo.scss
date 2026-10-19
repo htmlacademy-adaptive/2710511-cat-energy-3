@@ -1,0 +1,40 @@
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+  padding-left: 20px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.logo__text {
+  margin-top: 10px;
+}
+
+
+@media (min-width: $tablet-width) {
+  .logo {
+    gap: 13px;
+    padding: 0;
+  }
+
+  .logo__text {
+    margin-top: 5px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .logo {
+    gap: 14px;
+  }
+
+  .logo__text {
+    margin: 0;
+  }
+}

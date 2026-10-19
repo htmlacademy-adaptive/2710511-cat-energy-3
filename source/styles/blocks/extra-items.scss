@@ -1,0 +1,163 @@
+.extra-items {
+  width: 100%;
+  overflow-x: clip;
+}
+
+.extra-items__container {
+  width: 280px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+
+.extra-items__title {
+  display: flex;
+  position: relative;
+  width: fit-content;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 400;
+  align-items: center;
+  gap: 20px;
+  color: $color-secondary;
+  margin: 0 0 35px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin-left: 20px;
+    width: 100vw;
+    height: 2px;
+    background-color: $color-green;
+  }
+}
+
+.extra-items__list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 0 35px;
+}
+
+
+.extra-items__text {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Lato", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  text-align: center;
+  padding: 187px 40px 43px;
+  background-color: $color-main;
+  background-image:
+    url("../../icons/stack.svg#icon-gift"),
+    linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+    url("../../images/catalog-background-cat@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center 59px, 0 0, center;
+  background-size: 78px 80px, 100% 100%, contain;
+}
+
+@media (min-width: $tablet-width) {
+  .extra-items__container {
+    width: 708px;
+    margin: 0 auto;
+    padding-bottom: 78px;
+  }
+
+  .extra-items__title {
+    font-size: 32px;
+    line-height: 32px;
+    margin-bottom: 80px;
+    margin-left: 40px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 100%;
+      margin-right: 37px;
+      width: 100vw;
+      height: 2px;
+      background-color: $color-green;
+    }
+
+    &::after {
+      margin-left: 37px;
+    }
+  }
+
+  .extra-items__list {
+    border: 1px solid #cdcdcd;
+    border-bottom: none;
+    margin-bottom: 68px;
+  }
+
+  .extra-items__text {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    min-height: 200px;
+    padding: 60px 125px 60px 0;
+    text-align: left;
+    background-image:
+      url("../../icons/stack.svg#icon-gift"),
+      linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+      url("../../images/catalog-background-cat-tablet@1x.jpg");
+    background-position: left 77px center, 0 0, center;
+    background-size: 80px 83px, 100% 100%, cover;
+
+    br {
+      display: inline;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .extra-items__container {
+    display: grid;
+    grid-template-columns: 895px 245px;
+    margin: 0 auto;
+    padding-bottom: 95px;
+    width: 1220px;
+    gap: 0 80px;
+    align-items: start;
+  }
+
+  .extra-items__title {
+    grid-column: 1 / -1;
+    margin-left: 0;
+    margin-bottom: 80px;
+    font-size: 40px;
+    line-height: 40px;
+
+    &::before {
+      margin-right: 40px;
+    }
+
+    &::after {
+      margin-left: 40px;
+    }
+  }
+
+  .extra-items__list {
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .extra-items__text {
+    display: block;
+    width: 245px;
+    min-height: 288px;
+    padding: 185px 40px 42px;
+    text-align: center;
+    background-image:
+      url("../../icons/stack.svg#icon-gift"),
+      linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+      url("../../images/catalog-background-cat@1x.jpg");
+    background-position: center 55px, 0 0, center;
+    background-size: 80px 83px, 100% 100%, cover;
+  }
+}
